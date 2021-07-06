@@ -1,0 +1,7 @@
+# all-playbooks.yml
+---
+  - import-playbook: yum-update.yml
+  - import-playbook: install-services.yml
+  - import-playbook: setup-app.yml
+  - import-playbook: setup-lb.yml
+  - import-playbook: check-status.yml

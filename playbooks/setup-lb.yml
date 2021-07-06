@@ -9,6 +9,8 @@
           owner: bin
           group: wheel
           mode: 064
-
+        notify: restart Apache
+        
+    handlers:
       - name: restart Apache
         service: name=httpd state=restarted
