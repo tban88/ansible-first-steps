@@ -7,6 +7,11 @@
           dest: /var/www/html
           mode: 0755
       
+      - name: Create simple info page 
+        copy:
+          dest: /var/www/html/info.php
+          content: "<h1> Info about our webserver {{ ansible_hostname }} </h1>"
+
       - name: Configure php.ini file
         lineinfile:
           path: /etc/php.ini
